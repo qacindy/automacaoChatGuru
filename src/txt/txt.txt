@@ -1,0 +1,23 @@
+Funcionalidades Principais
+
+•  Criação de Tickets:
+•	Capacidade para os usuários (clientes ou internos) criar novos tickets de suporte, descrevendo o problema ou solicitação detalhadamente.
+•  Atribuição de Responsáveis:
+•	Possibilidade de atribuir tickets a membros específicos da equipe de suporte, garantindo responsabilidade clara pelo acompanhamento e resolução.
+•  Priorização de Tickets:
+•	Funcionalidade para definir a prioridade dos tickets (baixa, média, alta, urgente), ajudando na gestão do tempo e na resolução por ordem de importância.
+•  Comentários e Atualizações:
+•	Capacidade de adicionar comentários e atualizações nos tickets, permitindo comunicação contínua entre o usuário e a equipe de suporte durante o processo de resolução.
+•  Histórico de Atividades:
+•	Registro detalhado de todas as interações e atividades relacionadas a cada ticket, incluindo datas de abertura, atualizações, atribuições e resoluções.
+•  Notificações Automáticas:
+•	Sistema de notificações automáticas para informar aos usuários sobre atualizações nos tickets, como mudanças de status ou novos comentários.
+•  Filtros e Pesquisas Avançadas:
+•	Funcionalidades robustas de filtragem e pesquisa para facilitar a localização rápida de tickets com base em critérios como status, prioridade, data de criação, etc.
+•  Relatórios e Métricas:
+•	Geração de relatórios e métricas sobre o desempenho do suporte, incluindo tempo médio de resposta, tempo médio de resolução, número de tickets por status, entre outros.
+•  Integrações com Outros Sistemas:
+•	Capacidade de integração com outros sistemas de gestão ou ferramentas de suporte, como CRM (Customer Relationship Management), para facilitar a sincronização de dados e processos.
+•  Segurança e Controle de Acesso:
+•	Medidas robustas de segurança para proteger informações sensíveis dos clientes e controle de acesso para garantir que apenas usuários autorizados possam visualizar ou modificar tickets.
+

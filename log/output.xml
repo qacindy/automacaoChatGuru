@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.8.10 on win32)" generated="2024-06-27T17:02:08.364930" rpa="false" schemaversion="5">
+<suite id="s1" name="RC" source="C:\Workspace\RC">
+<suite id="s1-s1" name="Test" source="C:\Workspace\RC\test">
+<suite id="s1-s1-s1" name="ChatGuru" source="C:\Workspace\RC\test\ChatGuru.robot">
+<test id="s1-s1-s1-t1" name="Cenário: Enviar Mensagem Com Sucesso" line="9">
+<kw name="Abrir o navegador" owner="customKeywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-27T17:02:08.634028" level="INFO">Opening browser 'chrome' to base url 'https://s6.chatguru.app/chats#667af0fb85b7db9f7f865f7f'.</msg>
+<arg>url=${URL}</arg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-27T17:02:08.633031" elapsed="7.314439"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-27T17:02:15.948475" elapsed="0.046148"/>
+</kw>
+<status status="PASS" start="2024-06-27T17:02:08.633031" elapsed="7.362594"/>
+</kw>
+<kw name="Dado que estou na página de login &quot;https://s6.chatguru.app/login&quot;" owner="given">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TXT_BOAS_VINDAS_LOGIN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-27T17:02:15.997632" elapsed="0.082395"/>
+</kw>
+<status status="PASS" start="2024-06-27T17:02:15.996624" elapsed="0.084402"/>
+</kw>
+<kw name="Quando faço login com nome de usuário &quot;seu_usuario&quot; e senha &quot;sua_senha&quot;" owner="when">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT_EMAIL}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-27T17:02:16.082027" elapsed="0.029688"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-27T17:02:16.113714" level="INFO">Typing text 'cintia.avanz@hotmail.com' into text field '//input[contains(@type,'email')]'.</msg>
+<arg>${INPUT_EMAIL}</arg>
+<arg>cintia.avanz@hotmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-27T17:02:16.112725" elapsed="0.283385"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-06-27T17:02:16.397110" level="INFO">Typing password into text field '//input[contains(@type,'password')]'.</msg>
+<msg time="2024-06-27T17:02:16.430665" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${INPUT_SENHA}</arg>
+<arg>2w@eYQy4r2y</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-27T17:02:16.396110" elapsed="0.089615"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-27T17:02:16.486737" level="INFO">Clicking element '//button[@class='FormButton'][contains(.,'Login')]'.</msg>
+<arg>${BTN_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-27T17:02:16.485725" elapsed="7.079610"/>
+</kw>
+<status status="PASS" start="2024-06-27T17:02:16.081026" elapsed="7.484309"/>
+</kw>
+<kw name="E eu clico em &quot;Chats&quot; no menu da barra lateral" owner="when">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MENU_LATERAL}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-27T17:02:23.567338" elapsed="0.033061"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-06-27T17:02:23.601402" level="INFO">Simulating Mouse Over on element '//*[@id="menu_lateral_principal"]'.</msg>
+<arg>${MENU_LATERAL}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-06-27T17:02:23.600399" elapsed="0.306255"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CHAT_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-27T17:02:23.907655" elapsed="0.027001"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-27T17:02:23.935656" level="INFO">Clicking element '//*[@id="menu_lateral_principal"]/li[1]/a/span'.</msg>
+<arg>${CHAT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-27T17:02:23.935656" elapsed="3.991529"/>
+</kw>
+<status status="PASS" start="2024-06-27T17:02:23.566334" elapsed="4.360851"/>
+</kw>
+<kw name="E eu mando uma mensagem com um anexo para o número do Whatsapp" owner="when">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CARD_CONTAINER}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-27T17:02:27.929186" elapsed="0.281945"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-27T17:02:28.213132" level="INFO">Clicking element 'xpath=(//*[@id="card-container"]/a/div)[1]'.</msg>
+<arg>${CARD_CONTAINER}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-27T17:02:28.212152" elapsed="0.097457"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${INPUT_MESSAGE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-27T17:02:28.309609" elapsed="0.470100"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-27T17:02:28.780709" level="INFO">Typing text 'Teste de envio' into text field '//textarea[@name='input_message']'.</msg>
+<arg>${INPUT_MESSAGE}</arg>
+<arg>Teste de envio</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-27T17:02:28.780709" elapsed="0.082139"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-27T17:02:28.862848" level="INFO">Clicking element '//*[@id="btn-send-message"]'.</msg>
+<arg>${BTN_SEND_MESSAGE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-27T17:02:28.862848" elapsed="0.140076"/>
+</kw>
+<status status="PASS" start="2024-06-27T17:02:27.928188" elapsed="1.074736"/>
+</kw>
+<kw name="Então eu verei a mensagem enviada com sucesso" owner="then">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TXT_MSG_ENVIADA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-27T17:02:29.004978" elapsed="0.044512"/>
+</kw>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>${TXT_MSG_ENVIADA}</arg>
+<arg>Teste</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2024-06-27T17:02:29.050498" elapsed="0.036017"/>
+</kw>
+<status status="PASS" start="2024-06-27T17:02:29.003964" elapsed="0.082551"/>
+</kw>
+<kw name="Fechar o navegador" owner="customKeywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-27T17:02:29.088529" elapsed="2.558138"/>
+</kw>
+<status status="PASS" start="2024-06-27T17:02:29.087515" elapsed="2.559152"/>
+</kw>
+<tag>chatguru</tag>
+<status status="PASS" start="2024-06-27T17:02:08.632001" elapsed="23.015691"/>
+</test>
+<status status="PASS" start="2024-06-27T17:02:08.384875" elapsed="23.263812"/>
+</suite>
+<status status="PASS" start="2024-06-27T17:02:08.383870" elapsed="23.266815"/>
+</suite>
+<status status="PASS" start="2024-06-27T17:02:08.366401" elapsed="23.287825"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">chatguru</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="RC">RC</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Test">RC.Test</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="ChatGuru">RC.Test.ChatGuru</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
