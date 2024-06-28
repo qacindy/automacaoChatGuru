@@ -13,4 +13,6 @@ ${CX_IMG_ENVIADO}            xpath=(//a[@class='msg-image ct lightbox-modal'])[l
 ${CX_TXT_ENVIADO}            xpath=(//a[contains(@class,'msg-image-small ct')])[last()]
 ${CX_AUDIO_ENVIADO}          (//div[@class='text-center'][contains(.,'Velocidade: 100%')])[last()] 
   
+${CX_MSG_RECEBIDA}           xpath=//div[@class='m-cont-in float-left'] 
+${DOWLOAD_ULT_MSG_RECEBIDA}  xpath=(//button[@class='btn btn-sm btn-light float-right mt-1'])[last()]  
 

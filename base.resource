@@ -3,12 +3,14 @@
 Library    SeleniumLibrary   
 Library    OperatingSystem
 Library    DateTime
+Library    BuiltIn
 
 ### Locators
 Resource    resource/locators/chatLocators.resource
 Resource    resource/locators/homeLocators.resource
 Resource    resource/locators/loginLocators.resource
 Resource    resource/locators/attachLocators.resource
+Resource    resource/locators/alertMessages.resource
 
 ### Gherkin Actions
 Resource    resource/actions/given.resource

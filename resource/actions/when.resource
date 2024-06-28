@@ -26,13 +26,10 @@ eu mando uma mensagem para o número do Whatsapp
 
 eu envio um arquivo de imagem no chat
     Wait Until Element Is Visible    ${CARD_CONTAINER}
-    Capture Page Screenshot
     Click Element    ${CARD_CONTAINER}
 
     Wait Until Element Is Visible    ${ATTACH_BUTTON} 
-    Capture Page Screenshot
     Click Element   ${ATTACH_BUTTON} 
-    Capture Page Screenshot   
 
     ${FILE_IMAGE}    Join Path        ${FILE_IMAGE}
     Choose file    ${UploadFiletest}      ${FILE_IMAGE}
@@ -44,13 +41,10 @@ eu envio um arquivo de imagem no chat
 
 eu envio um arquivo de áudio no chat
     Wait Until Element Is Visible    ${CARD_CONTAINER}
-    Capture Page Screenshot
     Click Element    ${CARD_CONTAINER}
 
     Wait Until Element Is Visible    ${ATTACH_BUTTON} 
-    Capture Page Screenshot
-    Click Element   ${ATTACH_BUTTON} 
-    Capture Page Screenshot   
+    Click Element   ${ATTACH_BUTTON}   
 
     ${FILE_AUDIO}    Join Path        ${FILE_AUDIO}
     Choose file    ${UploadFiletest}      ${FILE_AUDIO}
@@ -62,13 +56,10 @@ eu envio um arquivo de áudio no chat
 
 eu envio um arquivo de texto no chat
     Wait Until Element Is Visible    ${CARD_CONTAINER}
-    Capture Page Screenshot
     Click Element    ${CARD_CONTAINER}
 
     Wait Until Element Is Visible    ${ATTACH_BUTTON} 
-    Capture Page Screenshot
     Click Element   ${ATTACH_BUTTON} 
-    Capture Page Screenshot   
 
     ${FILE_TEXT}    Join Path        ${FILE_TEXT}
     Choose file    ${UploadFiletest}      ${FILE_TEXT}
@@ -80,13 +71,11 @@ eu envio um arquivo de texto no chat
 
 eu tento enviar dois arquivos diferentes
     Wait Until Element Is Visible    ${CARD_CONTAINER}
-    Capture Page Screenshot
     Click Element    ${CARD_CONTAINER}
 
     Wait Until Element Is Visible    ${ATTACH_BUTTON} 
-    Capture Page Screenshot
     Click Element   ${ATTACH_BUTTON} 
-    Capture Page Screenshot   
+
 
     ${FILE_AUDIO}    Join Path        ${FILE_AUDIO}
     Choose file    ${UploadFiletest}      ${FILE_AUDIO}
@@ -102,15 +91,11 @@ eu tento enviar dois arquivos diferentes
     Sleep    5s
     
 eu tento enviar um arquivo maior que 15MB no chat    
-    
     Wait Until Element Is Visible    ${CARD_CONTAINER}
-    Capture Page Screenshot
     Click Element    ${CARD_CONTAINER}
 
     Wait Until Element Is Visible    ${ATTACH_BUTTON} 
-    Capture Page Screenshot
     Click Element   ${ATTACH_BUTTON} 
-    Capture Page Screenshot   
 
     ${FILE_MAIOR_15MG}    Join Path        ${FILE_MAIOR_15MG}
     Choose file    ${UploadFiletest}      ${FILE_MAIOR_15MG}
@@ -119,4 +104,31 @@ eu tento enviar um arquivo maior que 15MB no chat
     Sleep    5s
     Click Element    ${SEND_ATTACH}
     Sleep    5s
-     
+    
+eu recebi um arquivo no chat
+    Wait Until Element Is Visible    ${CARD_CONTAINER}
+    Click Element    ${CARD_CONTAINER}
+    Wait Until Element Is Visible     ${CX_MSG_RECEBIDA}
+
+eu clico para baixar o arquivo
+    Wait Until Element Is Visible      ${DOWLOAD_ULT_MSG_RECEBIDA}
+    Click Element                      ${DOWLOAD_ULT_MSG_RECEBIDA}
+
+eu enviei um arquivo por mensagem
+    Wait Until Element Is Visible    ${CARD_CONTAINER}
+    Click Element    ${CARD_CONTAINER}
+
+    Wait Until Element Is Visible    ${ATTACH_BUTTON} 
+    Click Element   ${ATTACH_BUTTON} 
+
+    ${FILE_TEXT}    Join Path        ${FILE_TEXT}
+    Choose file    ${UploadFiletest}      ${FILE_TEXT}
+    Wait Until Page Contains Element   ${FILE_ATTACHED}
+    Wait Until Element Is Visible     ${SEND_ATTACH}
+    Sleep    5s
+    Click Element    ${SEND_ATTACH}
+    Sleep    5s
+
+valido o arquivo
+    Wait Until Element Is Visible      ${DOWLOAD_ULT_MSG_RECEBIDA}
+    Click Element                      ${DOWLOAD_ULT_MSG_RECEBIDA}

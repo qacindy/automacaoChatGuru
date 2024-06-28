@@ -1,1045 +1,216 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.3 on win32)" generated="2024-06-28T02:08:24.221505" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0.1 (Python 3.12.3 on win32)" generated="2024-06-28T10:06:50.484730" rpa="false" schemaversion="5">
 <suite id="s1" name="ChatGuru" source="C:\chatguru_automation\test\ChatGuru.robot">
-<test id="s1-t1" name="Cenário 1: Enviar Mensagem Com Sucesso" line="9">
+<test id="s1-t1" name="Cenário 8: Validar assinatura dos arquivos enviados" line="49">
 <kw name="Abrir o navegador" owner="customKeywords" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:08:24.477612" level="INFO">Opening browser 'chrome' to base url 'https://s6.chatguru.app/chats#667af0fb85b7db9f7f865f7f'.</msg>
+<msg time="2024-06-28T10:06:50.682298" level="INFO">Opening browser 'chrome' to base url 'https://s6.chatguru.app/chats#667af0fb85b7db9f7f865f7f'.</msg>
 <arg>url=${URL}</arg>
 <arg>browser=${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-06-28T02:08:24.477612" elapsed="7.002618"/>
+<status status="PASS" start="2024-06-28T10:06:50.682298" elapsed="7.268989"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-06-28T02:08:31.481228" elapsed="0.038178"/>
+<status status="PASS" start="2024-06-28T10:06:57.952286" elapsed="0.042477"/>
 </kw>
-<status status="PASS" start="2024-06-28T02:08:24.477612" elapsed="7.041794"/>
+<status status="PASS" start="2024-06-28T10:06:50.682298" elapsed="7.312465"/>
 </kw>
 <kw name="Dado que sou um usuário logado na plataforma de chat" owner="given">
 <kw name="que estou na página de login &quot;https://s6.chatguru.app/login&quot;" owner="given">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${TXT_BOAS_VINDAS_LOGIN}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:08:31.520405" elapsed="0.025003"/>
+<status status="PASS" start="2024-06-28T10:06:57.996913" elapsed="0.025998"/>
 </kw>
-<status status="PASS" start="2024-06-28T02:08:31.520405" elapsed="0.025003"/>
-</kw>
-<kw name="faço login com nome de usuário &quot;seu_usuario&quot; e senha &quot;sua_senha&quot;" owner="when">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${INPUT_EMAIL}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:08:31.546405" elapsed="0.021684"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:08:31.568089" level="INFO">Typing text 'cintia.avanz@hotmail.com' into text field '//input[contains(@type,'email')]'.</msg>
-<arg>${INPUT_EMAIL}</arg>
-<arg>cintia.avanz@hotmail.com</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:08:31.568089" elapsed="0.129712"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:08:31.698801" level="INFO">Typing password into text field '//input[contains(@type,'password')]'.</msg>
-<msg time="2024-06-28T02:08:31.724807" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>${INPUT_SENHA}</arg>
-<arg>2w@eYQy4r2y</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:08:31.698801" elapsed="0.077762"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:08:31.776563" level="INFO">Clicking element '//button[@class='FormButton'][contains(.,'Login')]'.</msg>
-<arg>${BTN_LOGIN}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:08:31.776563" elapsed="7.023419"/>
-</kw>
-<status status="PASS" start="2024-06-28T02:08:31.545408" elapsed="7.254574"/>
-</kw>
-<kw name="eu clico em &quot;Chats&quot; no menu da barra lateral" owner="when">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${MENU_LATERAL}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:08:38.800991" elapsed="0.019677"/>
-</kw>
-<kw name="Mouse Over" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:08:38.821676" level="INFO">Simulating Mouse Over on element '//*[@id="menu_lateral_principal"]'.</msg>
-<arg>${MENU_LATERAL}</arg>
-<doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:08:38.820668" elapsed="0.285632"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${CHAT_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:08:39.107297" elapsed="0.018921"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:08:39.126218" level="INFO">Clicking element '//*[@id="menu_lateral_principal"]/li[1]/a/span'.</msg>
-<arg>${CHAT_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:08:39.126218" elapsed="3.409463"/>
-</kw>
-<status status="PASS" start="2024-06-28T02:08:38.799982" elapsed="3.735699"/>
-</kw>
-<status status="PASS" start="2024-06-28T02:08:31.520405" elapsed="11.015276"/>
-</kw>
-<kw name="E eu mando uma mensagem para o número do Whatsapp" owner="when">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${CARD_CONTAINER}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:08:42.536807" elapsed="0.239905"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:08:42.776712" level="INFO">Clicking element 'xpath=//span[@class='user-name'][contains(.,'554189029791')]'.</msg>
-<arg>${CARD_CONTAINER}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:08:42.776712" elapsed="0.056141"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${INPUT_MESSAGE}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:08:42.832853" elapsed="0.452403"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:08:43.285256" level="INFO">Typing text 'Teste de envio' into text field '//textarea[@name='input_message']'.</msg>
-<arg>${INPUT_MESSAGE}</arg>
-<arg>Teste de envio</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:08:43.285256" elapsed="0.054741"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:08:43.341502" level="INFO">Clicking element '//*[@id="btn-send-message"]'.</msg>
-<arg>${BTN_SEND_MESSAGE}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:08:43.339997" elapsed="0.092381"/>
-</kw>
-<status status="PASS" start="2024-06-28T02:08:42.536807" elapsed="0.896576"/>
-</kw>
-<kw name="Então eu verei a mensagem enviada com sucesso" owner="then">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${TXT_MSG_ENVIADA}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:08:43.434379" elapsed="1.148125"/>
-</kw>
-<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
-<arg>${TXT_MSG_ENVIADA}</arg>
-<arg>Teste</arg>
-<doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" start="2024-06-28T02:08:44.582504" elapsed="0.028660"/>
-</kw>
-<status status="PASS" start="2024-06-28T02:08:43.434379" elapsed="1.176785"/>
-</kw>
-<kw name="Fechar o navegador" owner="customKeywords" type="TEARDOWN">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-06-28T02:08:44.612163" elapsed="2.215066"/>
-</kw>
-<status status="PASS" start="2024-06-28T02:08:44.612163" elapsed="2.215066"/>
-</kw>
-<tag>chatguru</tag>
-<status status="PASS" start="2024-06-28T02:08:24.476701" elapsed="22.351240"/>
-</test>
-<test id="s1-t2" name="Cenário 2: Envio de arquivo de imagem" line="14">
-<kw name="Abrir o navegador" owner="customKeywords" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:08:46.833067" level="INFO">Opening browser 'chrome' to base url 'https://s6.chatguru.app/chats#667af0fb85b7db9f7f865f7f'.</msg>
-<arg>url=${URL}</arg>
-<arg>browser=${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-06-28T02:08:46.833067" elapsed="6.377355"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-06-28T02:08:53.210422" elapsed="0.037807"/>
-</kw>
-<status status="PASS" start="2024-06-28T02:08:46.832129" elapsed="6.416100"/>
-</kw>
-<kw name="Dado que sou um usuário logado na plataforma de chat" owner="given">
-<kw name="que estou na página de login &quot;https://s6.chatguru.app/login&quot;" owner="given">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${TXT_BOAS_VINDAS_LOGIN}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:08:53.249228" elapsed="0.022061"/>
-</kw>
-<status status="PASS" start="2024-06-28T02:08:53.249228" elapsed="0.022061"/>
+<status status="PASS" start="2024-06-28T10:06:57.995902" elapsed="0.027009"/>
 </kw>
 <kw name="faço login com nome de usuário &quot;seu_usuario&quot; e senha &quot;sua_senha&quot;" owner="when">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${INPUT_EMAIL}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:08:53.271289" elapsed="0.018998"/>
+<status status="PASS" start="2024-06-28T10:06:58.023911" elapsed="0.018001"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:08:53.291319" level="INFO">Typing text 'cintia.avanz@hotmail.com' into text field '//input[contains(@type,'email')]'.</msg>
+<msg time="2024-06-28T10:06:58.042919" level="INFO">Typing text 'cintia.avanz@hotmail.com' into text field '//input[contains(@type,'email')]'.</msg>
 <arg>${INPUT_EMAIL}</arg>
 <arg>cintia.avanz@hotmail.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:08:53.290287" elapsed="0.112619"/>
+<status status="PASS" start="2024-06-28T10:06:58.042919" elapsed="0.114992"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:08:53.403418" level="INFO">Typing password into text field '//input[contains(@type,'password')]'.</msg>
-<msg time="2024-06-28T02:08:53.429594" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2024-06-28T10:06:58.158918" level="INFO">Typing password into text field '//input[contains(@type,'password')]'.</msg>
+<msg time="2024-06-28T10:06:58.183344" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${INPUT_SENHA}</arg>
 <arg>2w@eYQy4r2y</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:08:53.402906" elapsed="0.076688"/>
+<status status="PASS" start="2024-06-28T10:06:58.158918" elapsed="0.075573"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:08:53.479594" level="INFO">Clicking element '//button[@class='FormButton'][contains(.,'Login')]'.</msg>
+<msg time="2024-06-28T10:06:58.235522" level="INFO">Clicking element '//button[@class='FormButton'][contains(.,'Login')]'.</msg>
 <arg>${BTN_LOGIN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:08:53.479594" elapsed="7.016135"/>
+<status status="PASS" start="2024-06-28T10:06:58.234491" elapsed="8.584002"/>
 </kw>
-<status status="PASS" start="2024-06-28T02:08:53.271289" elapsed="7.224440"/>
+<status status="PASS" start="2024-06-28T10:06:58.022911" elapsed="8.795582"/>
 </kw>
 <kw name="eu clico em &quot;Chats&quot; no menu da barra lateral" owner="when">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${MENU_LATERAL}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:09:00.496728" elapsed="0.021178"/>
+<status status="PASS" start="2024-06-28T10:07:06.819500" elapsed="0.018030"/>
 </kw>
 <kw name="Mouse Over" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:09:00.517906" level="INFO">Simulating Mouse Over on element '//*[@id="menu_lateral_principal"]'.</msg>
+<msg time="2024-06-28T10:07:06.838532" level="INFO">Simulating Mouse Over on element '//*[@id="menu_lateral_principal"]'.</msg>
 <arg>${MENU_LATERAL}</arg>
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:09:00.517906" elapsed="0.282514"/>
+<status status="PASS" start="2024-06-28T10:07:06.838532" elapsed="0.288698"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${CHAT_BUTTON}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:09:00.801419" elapsed="0.016123"/>
+<status status="PASS" start="2024-06-28T10:07:07.127230" elapsed="0.026541"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:09:00.819048" level="INFO">Clicking element '//*[@id="menu_lateral_principal"]/li[1]/a/span'.</msg>
+<msg time="2024-06-28T10:07:07.154818" level="INFO">Clicking element '//*[@id="menu_lateral_principal"]/li[1]/a/span'.</msg>
 <arg>${CHAT_BUTTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:09:00.817542" elapsed="3.472327"/>
+<status status="PASS" start="2024-06-28T10:07:07.154818" elapsed="2.808142"/>
 </kw>
-<status status="PASS" start="2024-06-28T02:09:00.495729" elapsed="3.794140"/>
+<status status="PASS" start="2024-06-28T10:07:06.818493" elapsed="3.144467"/>
 </kw>
-<status status="PASS" start="2024-06-28T02:08:53.248229" elapsed="11.041640"/>
+<status status="PASS" start="2024-06-28T10:06:57.995902" elapsed="11.967058"/>
 </kw>
-<kw name="Quando eu envio um arquivo de imagem no chat" owner="when">
+<kw name="E eu enviei um arquivo por mensagem" owner="when">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${CARD_CONTAINER}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:09:04.290876" elapsed="0.226637"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:09:04.604935" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-16.png"&gt;&lt;img src="selenium-screenshot-16.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-06-28T02:09:04.517513" elapsed="0.087422"/>
+<status status="PASS" start="2024-06-28T10:07:09.963955" elapsed="0.244817"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:09:04.604935" level="INFO">Clicking element 'xpath=//span[@class='user-name'][contains(.,'554189029791')]'.</msg>
+<msg time="2024-06-28T10:07:10.208772" level="INFO">Clicking element 'xpath=//span[@class='user-name'][contains(.,'554189029791')]'.</msg>
 <arg>${CARD_CONTAINER}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:09:04.604935" elapsed="0.051915"/>
+<status status="PASS" start="2024-06-28T10:07:10.208772" elapsed="0.051881"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${ATTACH_BUTTON}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:09:04.657359" elapsed="0.450656"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:09:05.239679" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-17.png"&gt;&lt;img src="selenium-screenshot-17.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-06-28T02:09:05.108015" elapsed="0.132669"/>
+<status status="PASS" start="2024-06-28T10:07:10.260653" elapsed="0.452238"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:09:05.240684" level="INFO">Clicking element '//i[@class='uil uil-paperclip']'.</msg>
+<msg time="2024-06-28T10:07:10.713915" level="INFO">Clicking element '//i[@class='uil uil-paperclip']'.</msg>
 <arg>${ATTACH_BUTTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:09:05.240684" elapsed="0.083653"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:09:05.454194" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-18.png"&gt;&lt;img src="selenium-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-06-28T02:09:05.324337" elapsed="0.130847"/>
+<status status="PASS" start="2024-06-28T10:07:10.713915" elapsed="0.047755"/>
 </kw>
 <kw name="Join Path" owner="OperatingSystem">
-<msg time="2024-06-28T02:09:05.455184" level="INFO">${FILE_IMAGE} = C:\chatguru_automation\src\img\teste.jpg</msg>
-<var>${FILE_IMAGE}</var>
-<arg>${FILE_IMAGE}</arg>
-<doc>Joins the given path part(s) to the given base path.</doc>
-<status status="PASS" start="2024-06-28T02:09:05.455184" elapsed="0.000000"/>
-</kw>
-<kw name="Choose File" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:09:05.455184" level="INFO">Sending C:\chatguru_automation\src\img\teste.jpg to browser.</msg>
-<arg>${UploadFiletest}</arg>
-<arg>${FILE_IMAGE}</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:09:05.455184" elapsed="0.038441"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${FILE_ATTACHED}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-06-28T02:09:05.494658" elapsed="0.063297"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${SEND_ATTACH}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:09:05.557955" elapsed="0.017549"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-28T02:09:10.576761" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-28T02:09:05.575504" elapsed="5.001257"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:09:10.577777" level="INFO">Clicking element 'xpath=//button[contains(.,'Enviar Arquivos')]'.</msg>
-<arg>${SEND_ATTACH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:09:10.577777" elapsed="0.046844"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-28T02:09:15.625897" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-28T02:09:10.625626" elapsed="5.000271"/>
-</kw>
-<status status="PASS" start="2024-06-28T02:09:04.289869" elapsed="11.336028"/>
-</kw>
-<kw name="Então o arquivo de imagem é enviado com sucesso" owner="then">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${CX_IMG_ENVIADO}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:09:15.626934" elapsed="0.025575"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:09:15.760444" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-19.png"&gt;&lt;img src="selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-06-28T02:09:15.652509" elapsed="0.107935"/>
-</kw>
-<status status="PASS" start="2024-06-28T02:09:15.626403" elapsed="0.134041"/>
-</kw>
-<kw name="E o arquivo de imagem aparece corretamente no chat para o destinatário" owner="then">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:09:15.767965" level="INFO">Current page contains element 'xpath=(//a[@class='msg-image ct lightbox-modal'])[last()]'.</msg>
-<arg>${CX_IMG_ENVIADO}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2024-06-28T02:09:15.761446" elapsed="0.006519"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${CHECK_ENVIO_2V}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-06-28T02:09:15.767965" elapsed="0.008388"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-06-28T02:09:15.777481" level="INFO">Mensagem chegou ao destinatario xpath=(//img[@src='/static/ack/2.png'])[last()]</msg>
-<arg>Mensagem chegou ao destinatario ${CHECK_ENVIO_2V}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-06-28T02:09:15.777481" elapsed="0.000000"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:09:15.794818" level="INFO">${HORA_ENVIO} = 02:08</msg>
-<var>${HORA_ENVIO}</var>
-<arg>${HORA_ENVIO}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:09:15.777481" elapsed="0.017337"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-06-28T02:09:15.794818" level="INFO">Mensagem enviada no horario: 02:08</msg>
-<arg>Mensagem enviada no horario: ${HORA_ENVIO}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-06-28T02:09:15.794818" elapsed="0.000000"/>
-</kw>
-<status status="PASS" start="2024-06-28T02:09:15.760444" elapsed="0.034374"/>
-</kw>
-<kw name="Fechar o navegador" owner="customKeywords" type="TEARDOWN">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-06-28T02:09:15.795815" elapsed="2.241888"/>
-</kw>
-<status status="PASS" start="2024-06-28T02:09:15.795815" elapsed="2.242769"/>
-</kw>
-<tag>chatguru</tag>
-<status status="PASS" start="2024-06-28T02:08:46.831068" elapsed="31.207516"/>
-</test>
-<test id="s1-t3" name="Cenário 3: Envio de arquivo de áudio" line="20">
-<kw name="Abrir o navegador" owner="customKeywords" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:09:18.041584" level="INFO">Opening browser 'chrome' to base url 'https://s6.chatguru.app/chats#667af0fb85b7db9f7f865f7f'.</msg>
-<arg>url=${URL}</arg>
-<arg>browser=${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-06-28T02:09:18.041584" elapsed="6.489091"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-06-28T02:09:24.530675" elapsed="0.027618"/>
-</kw>
-<status status="PASS" start="2024-06-28T02:09:18.040584" elapsed="6.517709"/>
-</kw>
-<kw name="Dado que sou um usuário logado na plataforma de chat" owner="given">
-<kw name="que estou na página de login &quot;https://s6.chatguru.app/login&quot;" owner="given">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${TXT_BOAS_VINDAS_LOGIN}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:09:24.559294" elapsed="0.023008"/>
-</kw>
-<status status="PASS" start="2024-06-28T02:09:24.559294" elapsed="0.023008"/>
-</kw>
-<kw name="faço login com nome de usuário &quot;seu_usuario&quot; e senha &quot;sua_senha&quot;" owner="when">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${INPUT_EMAIL}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:09:24.582302" elapsed="0.027527"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:09:24.609829" level="INFO">Typing text 'cintia.avanz@hotmail.com' into text field '//input[contains(@type,'email')]'.</msg>
-<arg>${INPUT_EMAIL}</arg>
-<arg>cintia.avanz@hotmail.com</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:09:24.609829" elapsed="0.120187"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:09:24.730016" level="INFO">Typing password into text field '//input[contains(@type,'password')]'.</msg>
-<msg time="2024-06-28T02:09:24.757529" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>${INPUT_SENHA}</arg>
-<arg>2w@eYQy4r2y</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:09:24.730016" elapsed="0.078017"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:09:24.809034" level="INFO">Clicking element '//button[@class='FormButton'][contains(.,'Login')]'.</msg>
-<arg>${BTN_LOGIN}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:09:24.808033" elapsed="7.192769"/>
-</kw>
-<status status="PASS" start="2024-06-28T02:09:24.582302" elapsed="7.419008"/>
-</kw>
-<kw name="eu clico em &quot;Chats&quot; no menu da barra lateral" owner="when">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${MENU_LATERAL}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:09:32.001310" elapsed="0.020816"/>
-</kw>
-<kw name="Mouse Over" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:09:32.023136" level="INFO">Simulating Mouse Over on element '//*[@id="menu_lateral_principal"]'.</msg>
-<arg>${MENU_LATERAL}</arg>
-<doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:09:32.022126" elapsed="0.299404"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${CHAT_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:09:32.322071" elapsed="0.021020"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:09:32.344094" level="INFO">Clicking element '//*[@id="menu_lateral_principal"]/li[1]/a/span'.</msg>
-<arg>${CHAT_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:09:32.343091" elapsed="3.430777"/>
-</kw>
-<status status="PASS" start="2024-06-28T02:09:32.001310" elapsed="3.773556"/>
-</kw>
-<status status="PASS" start="2024-06-28T02:09:24.559294" elapsed="11.215572"/>
-</kw>
-<kw name="Quando eu envio um arquivo de áudio no chat" owner="when">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${CARD_CONTAINER}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:09:35.775867" elapsed="0.228627"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:09:36.078689" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-20.png"&gt;&lt;img src="selenium-screenshot-20.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-06-28T02:09:36.004494" elapsed="0.074195"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:09:36.078689" level="INFO">Clicking element 'xpath=//span[@class='user-name'][contains(.,'554189029791')]'.</msg>
-<arg>${CARD_CONTAINER}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:09:36.078689" elapsed="0.053117"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ATTACH_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:09:36.131806" elapsed="0.435334"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:09:36.730324" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-21.png"&gt;&lt;img src="selenium-screenshot-21.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-06-28T02:09:36.567140" elapsed="0.163184"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:09:36.731317" level="INFO">Clicking element '//i[@class='uil uil-paperclip']'.</msg>
-<arg>${ATTACH_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:09:36.730324" elapsed="0.081773"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:09:36.923938" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-22.png"&gt;&lt;img src="selenium-screenshot-22.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-06-28T02:09:36.813098" elapsed="0.110840"/>
-</kw>
-<kw name="Join Path" owner="OperatingSystem">
-<msg time="2024-06-28T02:09:36.923938" level="INFO">${FILE_AUDIO} = C:\chatguru_automation\src\audio\aud2.mp3</msg>
-<var>${FILE_AUDIO}</var>
-<arg>${FILE_AUDIO}</arg>
-<doc>Joins the given path part(s) to the given base path.</doc>
-<status status="PASS" start="2024-06-28T02:09:36.923938" elapsed="0.000000"/>
-</kw>
-<kw name="Choose File" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:09:36.924926" level="INFO">Sending C:\chatguru_automation\src\audio\aud2.mp3 to browser.</msg>
-<arg>${UploadFiletest}</arg>
-<arg>${FILE_AUDIO}</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:09:36.924926" elapsed="0.038351"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${FILE_ATTACHED}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-06-28T02:09:36.963277" elapsed="0.013523"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${SEND_ATTACH}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:09:36.977799" elapsed="0.019315"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-28T02:09:41.997681" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-28T02:09:36.997114" elapsed="5.000567"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:09:41.997681" level="INFO">Clicking element 'xpath=//button[contains(.,'Enviar Arquivos')]'.</msg>
-<arg>${SEND_ATTACH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:09:41.997681" elapsed="0.047419"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-28T02:09:47.046476" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-28T02:09:42.045100" elapsed="5.001376"/>
-</kw>
-<status status="PASS" start="2024-06-28T02:09:35.774866" elapsed="11.271610"/>
-</kw>
-<kw name="Então o arquivo de áudio é enviado com sucesso" owner="then">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${CX_AUDIO_ENVIADO}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:09:47.047530" elapsed="0.014719"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:09:47.140222" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-23.png"&gt;&lt;img src="selenium-screenshot-23.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-06-28T02:09:47.062249" elapsed="0.077973"/>
-</kw>
-<status status="PASS" start="2024-06-28T02:09:47.046476" elapsed="0.093746"/>
-</kw>
-<kw name="E o arquivo de áudio aparece corretamente no chat para o destinatário" owner="then">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:09:47.150750" level="INFO">Current page contains element '(//div[@class='text-center'][contains(.,'Velocidade: 100%')])[last()]'.</msg>
-<arg>${CX_AUDIO_ENVIADO}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2024-06-28T02:09:47.141250" elapsed="0.009500"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${CHECK_ENVIO_2V}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-06-28T02:09:47.150750" elapsed="0.008998"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-06-28T02:09:47.159748" level="INFO">Mensagem chegou ao destinatario xpath=(//img[@src='/static/ack/2.png'])[last()]</msg>
-<arg>Mensagem chegou ao destinatario ${CHECK_ENVIO_2V}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-06-28T02:09:47.159748" elapsed="0.000000"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:09:47.178768" level="INFO">${HORA_ENVIO} = 02:08</msg>
-<var>${HORA_ENVIO}</var>
-<arg>${HORA_ENVIO}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:09:47.159748" elapsed="0.019020"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-06-28T02:09:47.178768" level="INFO">Mensagem enviada no horario: 02:08</msg>
-<arg>Mensagem enviada no horario: ${HORA_ENVIO}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-06-28T02:09:47.178768" elapsed="0.000000"/>
-</kw>
-<status status="PASS" start="2024-06-28T02:09:47.141250" elapsed="0.037518"/>
-</kw>
-<kw name="Fechar o navegador" owner="customKeywords" type="TEARDOWN">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-06-28T02:09:47.179770" elapsed="2.224928"/>
-</kw>
-<status status="PASS" start="2024-06-28T02:09:47.179770" elapsed="2.224928"/>
-</kw>
-<tag>chatguru</tag>
-<status status="PASS" start="2024-06-28T02:09:18.040584" elapsed="31.365504"/>
-</test>
-<test id="s1-t4" name="Cenário 4: Envio de arquivo de texto" line="26">
-<kw name="Abrir o navegador" owner="customKeywords" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:09:49.412256" level="INFO">Opening browser 'chrome' to base url 'https://s6.chatguru.app/chats#667af0fb85b7db9f7f865f7f'.</msg>
-<arg>url=${URL}</arg>
-<arg>browser=${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-06-28T02:09:49.411695" elapsed="6.345567"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-06-28T02:09:55.758260" elapsed="0.035011"/>
-</kw>
-<status status="PASS" start="2024-06-28T02:09:49.410726" elapsed="6.382545"/>
-</kw>
-<kw name="Dado que sou um usuário logado na plataforma de chat" owner="given">
-<kw name="que estou na página de login &quot;https://s6.chatguru.app/login&quot;" owner="given">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${TXT_BOAS_VINDAS_LOGIN}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:09:55.795268" elapsed="0.025163"/>
-</kw>
-<status status="PASS" start="2024-06-28T02:09:55.794270" elapsed="0.027217"/>
-</kw>
-<kw name="faço login com nome de usuário &quot;seu_usuario&quot; e senha &quot;sua_senha&quot;" owner="when">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${INPUT_EMAIL}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:09:55.822445" elapsed="0.020990"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:09:55.844438" level="INFO">Typing text 'cintia.avanz@hotmail.com' into text field '//input[contains(@type,'email')]'.</msg>
-<arg>${INPUT_EMAIL}</arg>
-<arg>cintia.avanz@hotmail.com</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:09:55.844438" elapsed="0.129922"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:09:55.974360" level="INFO">Typing password into text field '//input[contains(@type,'password')]'.</msg>
-<msg time="2024-06-28T02:09:56.004370" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>${INPUT_SENHA}</arg>
-<arg>2w@eYQy4r2y</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:09:55.974360" elapsed="0.087555"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:09:56.061915" level="INFO">Clicking element '//button[@class='FormButton'][contains(.,'Login')]'.</msg>
-<arg>${BTN_LOGIN}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:09:56.061915" elapsed="8.632910"/>
-</kw>
-<status status="PASS" start="2024-06-28T02:09:55.821487" elapsed="8.873338"/>
-</kw>
-<kw name="eu clico em &quot;Chats&quot; no menu da barra lateral" owner="when">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${MENU_LATERAL}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:10:04.695826" elapsed="0.021092"/>
-</kw>
-<kw name="Mouse Over" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:10:04.717907" level="INFO">Simulating Mouse Over on element '//*[@id="menu_lateral_principal"]'.</msg>
-<arg>${MENU_LATERAL}</arg>
-<doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:10:04.716918" elapsed="0.277504"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${CHAT_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:10:04.994422" elapsed="0.026891"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:10:05.021973" level="INFO">Clicking element '//*[@id="menu_lateral_principal"]/li[1]/a/span'.</msg>
-<arg>${CHAT_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:10:05.021313" elapsed="3.469157"/>
-</kw>
-<status status="PASS" start="2024-06-28T02:10:04.695826" elapsed="3.794644"/>
-</kw>
-<status status="PASS" start="2024-06-28T02:09:55.794270" elapsed="12.696200"/>
-</kw>
-<kw name="Quando eu envio um arquivo de texto no chat" owner="when">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${CARD_CONTAINER}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:10:08.491472" elapsed="0.232496"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:10:08.824440" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-24.png"&gt;&lt;img src="selenium-screenshot-24.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-06-28T02:10:08.725067" elapsed="0.099373"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:10:08.824943" level="INFO">Clicking element 'xpath=//span[@class='user-name'][contains(.,'554189029791')]'.</msg>
-<arg>${CARD_CONTAINER}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:10:08.824943" elapsed="0.056501"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ATTACH_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:10:08.881444" elapsed="0.443008"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:10:09.417034" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-25.png"&gt;&lt;img src="selenium-screenshot-25.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-06-28T02:10:09.324452" elapsed="0.092582"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:10:09.417653" level="INFO">Clicking element '//i[@class='uil uil-paperclip']'.</msg>
-<arg>${ATTACH_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:10:09.417573" elapsed="0.119374"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:10:09.633773" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-26.png"&gt;&lt;img src="selenium-screenshot-26.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-06-28T02:10:09.537950" elapsed="0.096832"/>
-</kw>
-<kw name="Join Path" owner="OperatingSystem">
-<msg time="2024-06-28T02:10:09.634782" level="INFO">${FILE_TEXT} = C:\chatguru_automation\src\txt\txt.pdf</msg>
+<msg time="2024-06-28T10:07:10.762668" level="INFO">${FILE_TEXT} = C:\chatguru_automation\src\txt\txt.pdf</msg>
 <var>${FILE_TEXT}</var>
 <arg>${FILE_TEXT}</arg>
 <doc>Joins the given path part(s) to the given base path.</doc>
-<status status="PASS" start="2024-06-28T02:10:09.634782" elapsed="0.000000"/>
+<status status="PASS" start="2024-06-28T10:07:10.762668" elapsed="0.000000"/>
 </kw>
 <kw name="Choose File" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:10:09.635728" level="INFO">Sending C:\chatguru_automation\src\txt\txt.pdf to browser.</msg>
+<msg time="2024-06-28T10:07:10.762668" level="INFO">Sending C:\chatguru_automation\src\txt\txt.pdf to browser.</msg>
 <arg>${UploadFiletest}</arg>
 <arg>${FILE_TEXT}</arg>
 <doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:10:09.634782" elapsed="0.036810"/>
+<status status="PASS" start="2024-06-28T10:07:10.762668" elapsed="0.075942"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${FILE_ATTACHED}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-06-28T02:10:09.671592" elapsed="0.010047"/>
+<status status="PASS" start="2024-06-28T10:07:10.838610" elapsed="0.014072"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${SEND_ATTACH}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:10:09.682148" elapsed="0.247508"/>
+<status status="PASS" start="2024-06-28T10:07:10.852682" elapsed="0.239864"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-28T02:10:14.930812" level="INFO">Slept 5 seconds.</msg>
+<msg time="2024-06-28T10:07:16.094169" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-28T02:10:09.929656" elapsed="5.001156"/>
+<status status="PASS" start="2024-06-28T10:07:11.093542" elapsed="5.000627"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:10:14.931337" level="INFO">Clicking element 'xpath=//button[contains(.,'Enviar Arquivos')]'.</msg>
+<msg time="2024-06-28T10:07:16.095181" level="INFO">Clicking element 'xpath=//button[contains(.,'Enviar Arquivos')]'.</msg>
 <arg>${SEND_ATTACH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:10:14.930812" elapsed="0.050289"/>
+<status status="PASS" start="2024-06-28T10:07:16.094169" elapsed="0.039666"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-28T02:10:19.982626" level="INFO">Slept 5 seconds.</msg>
+<msg time="2024-06-28T10:07:21.135681" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-28T02:10:14.982104" elapsed="5.000522"/>
+<status status="PASS" start="2024-06-28T10:07:16.134835" elapsed="5.000846"/>
 </kw>
-<status status="PASS" start="2024-06-28T02:10:08.491472" elapsed="11.491154"/>
+<status status="PASS" start="2024-06-28T10:07:09.962960" elapsed="11.172721"/>
 </kw>
-<kw name="Então o arquivo de texto é enviado com sucesso" owner="then">
+<kw name="Quando valido o arquivo" owner="when">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${CX_TXT_ENVIADO}</arg>
+<arg>${DOWLOAD_ULT_MSG_RECEBIDA}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:10:19.983858" elapsed="0.019245"/>
+<status status="PASS" start="2024-06-28T10:07:21.138601" elapsed="0.023554"/>
 </kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:10:20.102559" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-27.png"&gt;&lt;img src="selenium-screenshot-27.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-06-28T02:10:20.003103" elapsed="0.099456"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-28T10:07:21.162155" level="INFO">Clicking element 'xpath=(//button[@class='btn btn-sm btn-light float-right mt-1'])[last()]'.</msg>
+<arg>${DOWLOAD_ULT_MSG_RECEBIDA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-28T10:07:21.162155" elapsed="0.044001"/>
 </kw>
-<status status="PASS" start="2024-06-28T02:10:19.983858" elapsed="0.118701"/>
+<status status="PASS" start="2024-06-28T10:07:21.137607" elapsed="0.068549"/>
 </kw>
-<kw name="E o arquivo de texto aparece corretamente no chat para o destinatário" owner="then">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:10:20.110285" level="INFO">Current page contains element 'xpath=(//a[contains(@class,'msg-image-small ct')])[last()]'.</msg>
-<arg>${CX_TXT_ENVIADO}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2024-06-28T02:10:20.102559" elapsed="0.007726"/>
+<kw name="Então verifico que ele foi assinado pela AWS S3" owner="then">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-28T10:07:26.207331" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-28T10:07:21.207157" elapsed="5.000174"/>
 </kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${CHECK_ENVIO_2V}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-06-28T02:10:20.110285" elapsed="0.010106"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-06-28T02:10:20.120391" level="INFO">Mensagem chegou ao destinatario xpath=(//img[@src='/static/ack/2.png'])[last()]</msg>
-<arg>Mensagem chegou ao destinatario ${CHECK_ENVIO_2V}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-06-28T02:10:20.120391" elapsed="0.000000"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:10:20.140827" level="INFO">${HORA_ENVIO} = 02:09</msg>
-<var>${HORA_ENVIO}</var>
-<arg>${HORA_ENVIO}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:10:20.120391" elapsed="0.020436"/>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-06-28T10:07:26.217864" level="INFO">${NEW_URL} = https://s6.chatguru.app/chats#667af0fb85b7db9f7f865f7f</msg>
+<var>${NEW_URL}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-06-28T10:07:26.207850" elapsed="0.010014"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-06-28T02:10:20.141870" level="INFO">Mensagem enviada no horario: 02:09</msg>
-<arg>Mensagem enviada no horario: ${HORA_ENVIO}</arg>
+<msg time="2024-06-28T10:07:26.218867" level="INFO">https://s6.chatguru.app/chats#667af0fb85b7db9f7f865f7f</msg>
+<arg>${NEW_URL}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-06-28T02:10:20.141870" elapsed="0.000000"/>
+<status status="PASS" start="2024-06-28T10:07:26.217864" elapsed="0.001003"/>
 </kw>
-<status status="PASS" start="2024-06-28T02:10:20.102559" elapsed="0.039311"/>
+<kw name="Should Contain" owner="BuiltIn">
+<msg time="2024-06-28T10:07:26.218867" level="FAIL">'https://s6.chatguru.app/chats#667af0fb85b7db9f7f865f7f' does not contain 's3.amazonaws'</msg>
+<arg>${NEW_URL}</arg>
+<arg>s3.amazonaws</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="FAIL" start="2024-06-28T10:07:26.218867" elapsed="0.000000">'https://s6.chatguru.app/chats#667af0fb85b7db9f7f865f7f' does not contain 's3.amazonaws'</status>
+</kw>
+<status status="FAIL" start="2024-06-28T10:07:21.206156" elapsed="5.013708">'https://s6.chatguru.app/chats#667af0fb85b7db9f7f865f7f' does not contain 's3.amazonaws'</status>
 </kw>
 <kw name="Fechar o navegador" owner="customKeywords" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-06-28T02:10:20.142336" elapsed="2.242493"/>
+<status status="PASS" start="2024-06-28T10:07:26.220883" elapsed="2.237160"/>
 </kw>
-<status status="PASS" start="2024-06-28T02:10:20.142336" elapsed="2.242493"/>
-</kw>
-<tag>chatguru</tag>
-<status status="PASS" start="2024-06-28T02:09:49.410032" elapsed="32.976797"/>
-</test>
-<test id="s1-t5" name="Cenário 5: Tentativa de envio de vários arquivos" line="32">
-<kw name="Abrir o navegador" owner="customKeywords" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:10:22.391836" level="INFO">Opening browser 'chrome' to base url 'https://s6.chatguru.app/chats#667af0fb85b7db9f7f865f7f'.</msg>
-<arg>url=${URL}</arg>
-<arg>browser=${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-06-28T02:10:22.391836" elapsed="6.284385"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-06-28T02:10:28.676221" elapsed="0.033948"/>
-</kw>
-<status status="PASS" start="2024-06-28T02:10:22.390844" elapsed="6.319325"/>
-</kw>
-<kw name="Dado que sou um usuário logado na plataforma de chat" owner="given">
-<kw name="que estou na página de login &quot;https://s6.chatguru.app/login&quot;" owner="given">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${TXT_BOAS_VINDAS_LOGIN}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:10:28.710169" elapsed="0.021507"/>
-</kw>
-<status status="PASS" start="2024-06-28T02:10:28.710169" elapsed="0.022506"/>
-</kw>
-<kw name="faço login com nome de usuário &quot;seu_usuario&quot; e senha &quot;sua_senha&quot;" owner="when">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${INPUT_EMAIL}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:10:28.732675" elapsed="0.023092"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:10:28.755767" level="INFO">Typing text 'cintia.avanz@hotmail.com' into text field '//input[contains(@type,'email')]'.</msg>
-<arg>${INPUT_EMAIL}</arg>
-<arg>cintia.avanz@hotmail.com</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:10:28.755767" elapsed="0.121911"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:10:28.878831" level="INFO">Typing password into text field '//input[contains(@type,'password')]'.</msg>
-<msg time="2024-06-28T02:10:28.907843" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>${INPUT_SENHA}</arg>
-<arg>2w@eYQy4r2y</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:10:28.878831" elapsed="0.099201"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:10:28.979038" level="INFO">Clicking element '//button[@class='FormButton'][contains(.,'Login')]'.</msg>
-<arg>${BTN_LOGIN}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:10:28.979038" elapsed="6.969539"/>
-</kw>
-<status status="PASS" start="2024-06-28T02:10:28.732675" elapsed="7.215902"/>
-</kw>
-<kw name="eu clico em &quot;Chats&quot; no menu da barra lateral" owner="when">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${MENU_LATERAL}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:10:35.949761" elapsed="0.020586"/>
-</kw>
-<kw name="Mouse Over" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:10:35.971446" level="INFO">Simulating Mouse Over on element '//*[@id="menu_lateral_principal"]'.</msg>
-<arg>${MENU_LATERAL}</arg>
-<doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:10:35.971350" elapsed="0.301190"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${CHAT_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:10:36.272540" elapsed="0.021733"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:10:36.294802" level="INFO">Clicking element '//*[@id="menu_lateral_principal"]/li[1]/a/span'.</msg>
-<arg>${CHAT_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:10:36.294273" elapsed="3.471374"/>
-</kw>
-<status status="PASS" start="2024-06-28T02:10:35.949761" elapsed="3.815886"/>
-</kw>
-<status status="PASS" start="2024-06-28T02:10:28.710169" elapsed="11.055478"/>
-</kw>
-<kw name="Quando eu tento enviar dois arquivos diferentes" owner="when">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${CARD_CONTAINER}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:10:39.767006" elapsed="0.231403"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:10:40.090493" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-28.png"&gt;&lt;img src="selenium-screenshot-28.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-06-28T02:10:39.998922" elapsed="0.091571"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:10:40.091457" level="INFO">Clicking element 'xpath=//span[@class='user-name'][contains(.,'554189029791')]'.</msg>
-<arg>${CARD_CONTAINER}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:10:40.091457" elapsed="0.052516"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ATTACH_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:10:40.143973" elapsed="0.707683"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:10:40.976049" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-29.png"&gt;&lt;img src="selenium-screenshot-29.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-06-28T02:10:40.851656" elapsed="0.124393"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:10:40.976049" level="INFO">Clicking element '//i[@class='uil uil-paperclip']'.</msg>
-<arg>${ATTACH_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:10:40.976049" elapsed="0.060884"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:10:41.147297" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-30.png"&gt;&lt;img src="selenium-screenshot-30.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-06-28T02:10:41.036933" elapsed="0.110364"/>
-</kw>
-<kw name="Join Path" owner="OperatingSystem">
-<msg time="2024-06-28T02:10:41.148301" level="INFO">${FILE_AUDIO} = C:\chatguru_automation\src\audio\aud2.mp3</msg>
-<var>${FILE_AUDIO}</var>
-<arg>${FILE_AUDIO}</arg>
-<doc>Joins the given path part(s) to the given base path.</doc>
-<status status="PASS" start="2024-06-28T02:10:41.148301" elapsed="0.000000"/>
-</kw>
-<kw name="Choose File" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:10:41.148301" level="INFO">Sending C:\chatguru_automation\src\audio\aud2.mp3 to browser.</msg>
-<arg>${UploadFiletest}</arg>
-<arg>${FILE_AUDIO}</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:10:41.148301" elapsed="0.030015"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${FILE_ATTACHED}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-06-28T02:10:41.179376" elapsed="0.019810"/>
-</kw>
-<kw name="Join Path" owner="OperatingSystem">
-<msg time="2024-06-28T02:10:41.199186" level="INFO">${FILE_IMAGE} = C:\chatguru_automation\src\img\teste.jpg</msg>
-<var>${FILE_IMAGE}</var>
-<arg>${FILE_IMAGE}</arg>
-<doc>Joins the given path part(s) to the given base path.</doc>
-<status status="PASS" start="2024-06-28T02:10:41.199186" elapsed="0.000000"/>
-</kw>
-<kw name="Choose File" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:10:41.200170" level="INFO">Sending C:\chatguru_automation\src\img\teste.jpg to browser.</msg>
-<arg>${UploadFiletest}</arg>
-<arg>${FILE_IMAGE}</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:10:41.199186" elapsed="0.027689"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${FILE_ATTACHED}</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-06-28T02:10:41.226875" elapsed="0.044117"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${SEND_ATTACH}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:10:41.272012" elapsed="0.018426"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-28T02:10:46.290517" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-28T02:10:41.290438" elapsed="5.000079"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:10:46.291047" level="INFO">Clicking element 'xpath=//button[contains(.,'Enviar Arquivos')]'.</msg>
-<arg>${SEND_ATTACH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:10:46.290517" elapsed="0.060722"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-28T02:10:51.351884" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-28T02:10:46.351239" elapsed="5.000645"/>
-</kw>
-<status status="PASS" start="2024-06-28T02:10:39.767006" elapsed="11.584878"/>
-</kw>
-<kw name="Então a plataforma permite enviar somente o último arquivo anexado" owner="then">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${CX_IMG_ENVIADO}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-28T02:10:51.353408" elapsed="0.019090"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-28T02:10:56.372822" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-28T02:10:51.372498" elapsed="5.000324"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:10:56.395233" level="INFO">${HORA_ENVIO} = 02:09</msg>
-<var>${HORA_ENVIO}</var>
-<arg>${HORA_ENVIO}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:10:56.373407" elapsed="0.021826"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-06-28T02:10:56.396239" level="INFO">02:09</msg>
-<arg>${HORA_ENVIO}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-06-28T02:10:56.396239" elapsed="0.000000"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-06-28T02:10:56.411588" level="INFO">${HORA_ENVIO_PENULTIMA_MSG} = 02:09</msg>
-<var>${HORA_ENVIO_PENULTIMA_MSG}</var>
-<arg>${HORA_ENVIO_PENULTIMA_MSG}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-28T02:10:56.396239" elapsed="0.015349"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-06-28T02:10:56.412622" level="INFO">02:09</msg>
-<arg>${HORA_ENVIO_PENULTIMA_MSG}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-06-28T02:10:56.411588" elapsed="0.001034"/>
-</kw>
-<kw name="Should Not Be Equal" owner="BuiltIn">
-<msg time="2024-06-28T02:10:56.412622" level="FAIL">02:09 == 02:09</msg>
-<arg>${HORA_ENVIO}</arg>
-<arg>${HORA_ENVIO_PENULTIMA_MSG}</arg>
-<doc>Fails if the given objects are equal.</doc>
-<status status="FAIL" start="2024-06-28T02:10:56.412622" elapsed="0.000000">02:09 == 02:09</status>
-</kw>
-<status status="FAIL" start="2024-06-28T02:10:51.353408" elapsed="5.059214">02:09 == 02:09</status>
-</kw>
-<kw name="Fechar o navegador" owner="customKeywords" type="TEARDOWN">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-06-28T02:10:56.413619" elapsed="2.236333"/>
-</kw>
-<status status="PASS" start="2024-06-28T02:10:56.413619" elapsed="2.236333"/>
+<status status="PASS" start="2024-06-28T10:07:26.219864" elapsed="2.238179"/>
 </kw>
 <tag>chatguru</tag>
-<status status="FAIL" start="2024-06-28T02:10:22.389822" elapsed="36.261008">02:09 == 02:09</status>
+<status status="FAIL" start="2024-06-28T10:06:50.681271" elapsed="37.777333">'https://s6.chatguru.app/chats#667af0fb85b7db9f7f865f7f' does not contain 's3.amazonaws'</status>
 </test>
-<status status="FAIL" start="2024-06-28T02:08:24.223506" elapsed="154.428322"/>
+<status status="FAIL" start="2024-06-28T10:06:50.485920" elapsed="37.975704"/>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="1" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="4" fail="1" skip="0">chatguru</stat>
+<stat pass="0" fail="1" skip="0">chatguru</stat>
 </tag>
 <suite>
-<stat pass="4" fail="1" skip="0" id="s1" name="ChatGuru">ChatGuru</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="ChatGuru">ChatGuru</stat>
 </suite>
 </statistics>
 <errors>

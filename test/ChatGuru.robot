@@ -34,9 +34,23 @@ Cenário 5: Tentativa de envio de vários arquivos
     Quando eu tento enviar dois arquivos diferentes
     Então a plataforma permite enviar somente o último arquivo anexado
 
-# Cenário 6: Tentativa de envio de arquivo maior que 15MB
-#   Dado que sou um usuário logado na plataforma de chat
-#   Quando eu tento enviar um arquivo maior que 15MB no chat
-#   Então o envio do arquivo é rejeitado
-#   E eu vejo uma mensagem de erro informando que o tamanho máximo permitido é 15MB
+Cenário 6: Tentativa de envio de arquivo maior que 15MB
+    Dado que sou um usuário logado na plataforma de chat
+    Quando eu tento enviar um arquivo maior que 15MB no chat
+    E eu vejo uma mensagem de erro informando que o tamanho máximo permitido é 15MB
+    Então o envio do arquivo é rejeitado
+    
+Cenário 8: Download de arquivo recebido no chat
+      Dado que sou um usuário logado na plataforma de chat
+      E eu recebi um arquivo no chat
+      Quando eu clico para baixar o arquivo
+      Então o arquivo é aberto em uma nova aba
+
+Cenário 8: Validar assinatura dos arquivos enviados
+  Dado que sou um usuário logado na plataforma de chat
+  E eu enviei um arquivo por mensagem
+  Quando valido o arquivo
+  Então verifico que ele foi assinado pela AWS S3
+
+
 
